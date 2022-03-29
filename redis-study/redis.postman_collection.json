@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "f733c185-3cd0-456f-ac28-73f417472cb4",
+		"name": "redis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "redis-getAllKey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getAllRedisKeyInfo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllRedisKeyInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRedisHashKeyInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "key",
+							"value": "/page/cache",
+							"type": "text"
+						},
+						{
+							"key": "hashKey",
+							"value": "/home",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/getRedisHashKeyInfo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getRedisHashKeyInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setRedisHashKey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "key",
+							"value": "/page/cache",
+							"type": "text"
+						},
+						{
+							"key": "hashKey",
+							"value": "/home",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "{goodsName:gun}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/setRedisHashKeyInfo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setRedisHashKeyInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
